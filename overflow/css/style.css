@@ -1,0 +1,37 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: gray;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+   background-color: snow;
+   color: red;
+   margin-top: 50px;
+   width: 300px;
+   height: 250px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.caja-1 {
+   overflow: auto;
+}
+
+.text {
+   width: 400px;
+}
+
+.box-2{
+   background-color: blueviolet;
+   padding: 20px;
+   color: white;
+}
+.caja-2 {
+   border-radius: 50px;
+   background-color: aqua;
+   overflow: hidden;
+}

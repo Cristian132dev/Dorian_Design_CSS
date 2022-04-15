@@ -1,0 +1,72 @@
+/*
+depende la cantidad de veces que ponemos valores al margin, asi mismo se le asignan los lados, esto es igual para el padding:
+4 valores -> margin - padding: | top | right | bottom | left |
+3 valores -> margin - padding: | top | right/bottom | left |
+2 valores -> margin - padding: | top/right | bottom/left |
+1 valores -> margin - padding: | top/right/bottom/left |
+*/
+
+/*
+existen tres propiedades de border:
+border-width: ancho del borde
+   border-top-width
+   border-right-width
+   border-bottom-width
+   border-left-width
+border-style: estilo del borde
+border-color: color del borde
+*/
+
+/*! esto es una mala practica, ya que pierde el valor semantico de algunos elementos porque elimina por completo los espacios, ademas se debe ir selector por selectorre-aplicando los margins y los paddings y eso hace escribir codigo de mas inecesariamente */
+
+*{
+   /*! es buena practica agregar el box-sizing: border-box en el selector universal ya que todas las medidas de la caja que le hagamos a los elementos tendran la misma tendencia */
+   box-sizing: border-box;
+   /* margin: 0;
+   padding: 0; */
+}
+
+body {
+   background-color: #333;
+   font-family: cursive;
+   color: #fff;
+   margin: 0; /* es recomendable porque el margin del body es de 8 px, y de esta manera todo queda mas organizado */
+}
+
+/* los margenes para los elementos bloque se pueden usar para cualquier direccion */
+.block {
+   background-color: purple;
+   width: 200px;
+   height: 200px;
+   margin-top: 100px; /* si necesito un margin top, no puedo poner margin: 0 auto */
+
+   /* es mucho mejor centrarlo de esta manera, ya que no interfiero en el top ni el bottom */
+   margin-left: auto;
+   margin-right: auto;
+
+   /* el tamano por defecto de la caja es  content box, y este  le da tamano unicamente al content */
+   box-sizing: border-box; /* esta propiedad le dice a css que calcule el width tomando el content, el padding y el border, y asi quedara exactamente el ancho de la caja como la necesitamos */
+}
+
+.title {
+   margin-left: auto; /* arrastra el elemento hacia la derecha, porque se omite la derecha */
+   background-color: chartreuse;
+   border: 1px solid black;
+   width: 300px;
+}
+
+/* los elementos inline no se pueden modificar con width y height, porque el tamano lo determina el contenido */
+.inline {
+   background-color: lightcoral;
+   color: inherit;
+   margin-top: 200px; /* los margenes de linea solo tienen left y right, porque? no se :V */
+}
+
+.inline-2 {
+   background-color: lightcoral;
+   color: inherit;
+   /* a diferencia del margin, con padding si podemos alterar cualquiera de los lados sin problema */
+   padding-left: 100px;
+   padding-bottom: 20px;
+   border: 5px solid black;
+}

@@ -1,0 +1,29 @@
+/* Don´t repeat yourself */
+/* .text,
+.text-2,
+.text-3,
+.text-4 {
+   background-color: yellowgreen;
+} */
+
+/* div: padre h2: hijo */
+div .title-2{
+   background-color: blueviolet;
+}
+/* para seleccionar si o si los hijos sin tomar los nietos es asi */
+div > p{
+   color: violet;
+}
+
+/* los selectores hermanos son los que estan al mismo nivel en el arbol.
+el primero no se estiliza, y solo se estiliza el segundo valor si es siguiente al primero del arbol */
+
+.text-2 + h2{ /* siguiente hermano (+) */
+   color: cornflowerblue;
+}
+
+/* el primer valor no se estiliza pero si estiliza desde el segundo valor hasta el final del nivel  */
+.text-3 ~ p{ /* siguientes hermanos (~) */
+   background-color: aquamarine;
+}
+

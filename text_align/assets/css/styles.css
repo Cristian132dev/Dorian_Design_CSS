@@ -1,0 +1,40 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: gray;
+   color: white;
+}
+
+.text {
+   /* mueve hacia la izq, drch, centra o expande el texto */
+   /* no es recomendable usar justify porque este deja espacios entre palabras */
+   text-align: justify;
+}
+
+.box {
+   background-color: #666;
+   width: 100px;
+   padding: 10px 0;
+   margin: 20px 0;
+   border: 2px solid lightcoral;
+
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.link {
+   /* text align no centra elementos de linea, como este link, por ejemplo */
+   text-align: center;
+   display: block;
+}
+
+img {
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+   border: 1px solid aquamarine;
+   display: block;
+}

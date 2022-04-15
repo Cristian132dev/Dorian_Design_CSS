@@ -1,0 +1,39 @@
+/* los id no son recomendables para darle estilos */
+#title {
+   background-color: lightgreen;
+}
+
+/* la ventaja de las clases es la re-utilización */
+.paragraph {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* estiliza los atributos seleccionados */
+[href] {
+   background-color: lightgreen;
+}
+
+/* también se puede especificar el atributo :0 */
+[href="https://google.com"]{
+   background-color: orange;
+}
+
+/* al poner la (^=) añadirá estilos a los elementos que coincidan con lo que va despues siempre y cuando este de primero (recomendable poner entre comillas) */
+[href^="color"]{
+   background-color: red;
+}
+
+/* al poner (*=) añadira estilos a los elementos que coincidan con lo que sigue sin importan en que punto se encuentren */
+[href*="modo"]{
+   background-color: green;
+}
+
+/* con el signo dolar, el atributo se agregara al ultimo valor que coincida */
+[href$="azul"]{
+   background-color: blue;
+}
+
+/* usado naturalmente en los idomas, pero lo que enrealidad hace es poner un guion despues del atributo que le pasemos */
+[lang|="en"]{
+   background-color: rosybrown;
+}

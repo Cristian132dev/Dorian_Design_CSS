@@ -1,0 +1,32 @@
+/*
+display cambia el contexto de los elementos dentro del navegador
+
+valores:
+none: hace que el elemento no se muestre, pero sigue cargandose
+
+block: hace que el elemento sea de bloque, y admite las propiedades y valores de un elemento de bloque
+
+inline: hece que el elemento sea de linea, y adquiere las reglas de los elementos de tipo de linea
+
+inline-block: el elemento sigue siendo de linea, pero este admite las propiedades de un elemento de bloque
+*/
+
+*{
+   box-sizing: border-box;
+}
+
+body{
+   background-color: gray;
+   color: white;
+}
+
+.text{
+   background-color: lightcoral;
+   display: inline;
+}
+
+.link{
+   background-color: #fff;
+   display: inline-block;
+   margin-top: 25px;
+}

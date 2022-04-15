@@ -1,0 +1,38 @@
+/*
+agrega un borde afuera del box-model, la diferencia esta en:
+-que no ocupa sitio, por lo tanto no empuja ningun elemento hacia ningun lado
+-no se pueden redondear
+-no se pueden controlar los lados de forma independiente
+
+cuenta con la propiedad outline-offset, que permite aumentar o disminuir la distancia del outline respecto a la caja que pertence
+*/
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: gray;
+   color: white;
+}
+
+.border,
+.outline {
+   background-color: #666;
+   width: 100px;
+   padding: 10px 25px;
+   margin: 50px 100px;
+}
+
+.border{
+   border: 2px solid lightcoral;
+}
+
+.outline{
+   /* no ocupa espacio */
+   /* distancia entre el borde de la caja y el outline */
+   outline-offset: 10px; /* el valor se puede poner negativo y entra dentro de la caja */
+   /* tambien se puede alterar el tipo de linea tal como la hacemos con border */
+   outline: 20px dashed lightcoral;
+   border: 2px solid lightgreen;
+}

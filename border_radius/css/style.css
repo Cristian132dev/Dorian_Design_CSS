@@ -1,0 +1,36 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: gray;
+}
+
+.box {
+   margin-top: 80px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: lightcyan;
+   width: 200px;
+   height: 200px;
+}
+
+.border_1 {
+   /* en cada esquina se agrega un radio de 50px, como si se pusiera un circulo */
+   border-radius: 50px;
+}
+
+.border_2 {
+   /* si se agrega mas de un valor, este ira tomando los valores desde la esquina superior izq y sigue las manecillas del reloj, si falta una esquina sin valor, esta va a tomar el tamano de la esquina que tenga en frente */
+   border-radius: 50px 100px;
+}
+
+.border_3{
+   /* para hacer una elipsis se usan dos valores, cuando se usan en un solo lado especifico, con poner doble valor funciona */
+   /* el primer valor es el "eje x" y el segundo valor es el "eje y" */
+   border-top-left-radius: 20px 70px;
+
+   /* si se usa el shorthand para diferenciarlos se pone un slash (/) */
+   border-radius: 20px 70px / 40px 90px;
+   /* aunque es mejor trabajar cada elipsis con su correspondiente lado para no confundirnos, ni confundir a los demas developers */
+}

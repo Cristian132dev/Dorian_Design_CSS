@@ -1,0 +1,41 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: gray;
+   margin: 0;
+}
+
+.box-1,
+.box-2 {
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 20px;
+
+   background-color: lightcyan;
+   width: 300px;
+   height: 300px;
+}
+
+/* Los margenes verticales se solapan, como si no se contara el margin del otro elemento, entonces lo mejor es que el elemento superior empuje hacia abajo el siguiente elemento.
+esto solo ocurre con los margenes verticales, los horizontales no susede */
+
+.box-2 {
+   margin-top: 20px;
+}
+
+.header {
+   background-color: lightcoral;
+   height: 100px;
+   margin-bottom: 20px;
+
+   /** si nuestro elemento hijo mueve tambien nuestro elemento padre por el colapse del margen, debemos "alterar" nuestro elemento padre, ya sea con overflow, padding o border, esto evita el colapsado del margin */
+   overflow: hidden;
+   /* padding-top: 0.1px; */
+   /* border-top: 0.1px solid lightcoral; */
+}
+
+.title{
+   margin-top: 30px;
+}
