@@ -1,0 +1,39 @@
+/*
+
+top > bottom
+left > right
+
+el movimiento es una mrd, es como si estuviera al revez:
+top: avanza hacia abajo
+right: avanza hacia la izquierda
+bottom: avanza hacia arriba
+left: avanza hacia la derecha
+
+fixed: pierde su espacio en el html, pierde sus medidas si no se le declaran y se quedara fijo en esa posicion aunque
+hagamos scroll. no es tan usado desde que existe sticky, pero este no lo soportan los navegadores tan viejos
+
+
+*/
+
+* {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #333;
+   color: white;
+   margin: 0;
+   padding-top: 60px;
+}
+
+header {
+   background-color: lightseagreen;
+   text-align: center;
+   color: orangered;
+   padding: 25px 0;
+   width: 100%;
+
+   position: fixed;
+   top: 0;
+}

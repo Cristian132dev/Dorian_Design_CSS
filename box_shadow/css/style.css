@@ -1,0 +1,36 @@
+*{
+   box-sizing: border-box;
+}
+
+.box{
+   background-color: darkcyan;
+   width: 200px;
+   padding: 50px;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 30px;
+   margin-bottom: 20px;
+}
+
+/* box shadow clona el box model y lo hace igual */
+/* el primer valor es la posicion x respecto al box model padre,
+el segundo es la posicion y.
+la tercera posicion es el blur de la sombra.
+opc se le puede agregar el tamano respecto al box model, si el valor es negativo, lo hara mas pequeno.
+opc al final se le puede agregar el color
+opc si ponemos inset, la sombra se representa dentro del box model
+*/
+.caja-1{
+   box-shadow: 5px 5px 10px black;
+}
+
+.caja-2{
+   box-shadow: inset 5px 5px 10px black;
+}
+
+.caja-3{
+   border-radius: 0;
+   /* hacer esto no tiene limite, ademas el box shadow no ocupa espacio */
+   box-shadow: 5px 5px red, 10px 10px blue;
+}

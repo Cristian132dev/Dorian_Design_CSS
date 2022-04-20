@@ -1,0 +1,51 @@
+/*
+para usar z-index, la caja debe estar posicionada.
+
+consejo de Dorian es poner numeros de 10 en 10 o de 100 en 100, porque si se llegase a poner otro elemento entre otros dos, tener listo un buen rango para que no halla trabajo de mas innecesariamente.
+
+el padre nunca se pone delante del hijo, si queremos hacer eso, debemos poner el hijo detras del padre, para esto el padre no puede llevar z-index porque se rompe
+*/
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   background-color: #333;
+}
+
+
+.box {
+   text-align: center;
+   padding: 40px 0;
+   width: 100px;
+   height: 100px;
+}
+
+.container {
+   background-color: gray;
+   width: 200px;
+   height: 200px;
+   position: relative;
+}
+
+.box-1 {
+   background-color: lightcoral;
+   position: relative;
+   left: 150px;
+   z-index: -1;
+}
+
+.box-2 {
+   background-color: lightgreen;
+   top: 50px;
+   position: relative;
+
+   z-index: 1;
+}
+
+.box-3 {
+   background-color: lightcyan;
+   position: relative;
+}

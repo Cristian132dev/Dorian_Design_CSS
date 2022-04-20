@@ -1,0 +1,53 @@
+/*
+
+top > bottom
+left > right
+
+el movimiento es una mrd, es como si estuviera al revez:
+top: avanza hacia abajo
+right: avanza hacia la izquierda
+bottom: avanza hacia arriba
+left: avanza hacia la derecha
+
+sticky: pierde su espacio en el html y no se puede mover los elementos con top, right, bottom y left.
+recorre el alto del elemento padre y no funciona si overflow es diferente de visible
+
+
+*/
+
+* {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+img{
+   width: 100%;
+}
+
+body {
+   background-color: #333;
+   color: white;
+   margin: 0;
+}
+
+header {
+   background-color: lightseagreen;
+   text-align: center;
+   color: orangered;
+
+   /*position: sticky;
+   top: 0; */
+
+}
+
+.menu{
+   position: sticky;
+   top: 0;
+}
+
+.article-title{
+   position: sticky;
+   top: 0;
+   background-color: #333;
+   margin: 0;
+}
