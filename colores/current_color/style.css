@@ -1,0 +1,24 @@
+/*
+   existe el color: transparent
+
+   CurrentColor: hereda solo la propiedad color de su elemento, si no tine buscara el de su padre y seguira subiendo hasta
+   que lo encuentre, si no lo encuntra naturalmente se tornara a negro
+*/
+
+body {
+   background-color: mediumorchid;
+   color: #333;
+}
+
+.main {
+   color: aquamarine;
+   /* background-color: currentColor; */
+   width: 400px;
+}
+
+.box {
+   width: 300px;
+   height: 300px;
+   background-color: lightcoral;
+   border: 5px dashed currentColor;
+}

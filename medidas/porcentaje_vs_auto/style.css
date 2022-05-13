@@ -1,0 +1,65 @@
+/*
+   Cuando usamos porcentaje usamos de referencia el size del contenedor y el navegador calcula ese porcentaje y es ideal para hecer una pagina responsive
+   el auto permite que sea el navegador quien calcule el ancho preciso respecto al padre.
+
+   es usual que se rompan las cosas usando %, para solucionarlo es ideal usar auto
+*/
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   background-color: #333;
+   color: lightcoral;
+}
+
+.container-width {
+   width: 250px;
+   height: 250px;
+
+   background-color: lightgreen;
+}
+
+.box-width {
+   width: auto;
+   height: 30%;
+   margin-left: 50px;
+   background-color: lightseagreen;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||*/
+
+/*
+   los height con porcentajes usados con elementos hijos no suele tener "inconvenientes" a menos que los elementos padre no tengan un height declarado, porque si no lo tiene automaticamente el porcentaje se convierte en auto.
+
+   el auto lo calcula el navegador en base del contenido del elemento
+
+   por lo tanto recomienda desings usar padding en lugar de height, porque de este modo el contenido no se va a desbordar
+
+   OJO: hay un inconveniente con position y los porcentajes, al momento de darle a nuestra caja un position absolute y
+   relative, automaticamente se tomara como el contenedor padre el viewport (el documento que se ve en el navegador)
+   por lo tanto, usara este para desplegarse
+*/
+
+header{
+   background-color: lightskyblue;
+   text-align: center;
+}
+
+.container-height {
+   width: 250px;
+   height: 250px;
+
+   background-color: lightgreen;
+}
+
+.box-height {
+   position: absolute;
+   top: 0;
+   width: 50%;
+   height: 50%;
+
+   background-color: lightseagreen;
+}

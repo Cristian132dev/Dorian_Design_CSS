@@ -1,0 +1,39 @@
+/*
+   ordenar las propiedades es importante, para saber donde buscar y para que todo este bien ordenado para los demas
+   web designers. esto no es una regla o una especificacion solo una manera de ordenar nuestro css
+
+   1. propiedades de posicionamiento
+   2. propiedades de box model
+   3. propiedades de texto
+   4. propiedades visuales (colores, bordes, background ... )
+   5. el resto xd
+
+   el orden de cada seccion no importa
+
+*/
+
+span {
+   /* Position */
+   position: relative;
+   top: 0;
+   left: 0;
+
+   /* Box Model */
+   display: inline-block;
+   padding: 45px;
+   margin: 40px;
+   overflow: auto;
+
+   /* Propiedades de texto */
+   font-size: 16px;
+   text-align: center;
+   text-decoration: overline;
+
+   /* Propiedades Visuales */
+   border: 2px dashed violet;
+   color: blanchedalmond;
+   border-radius: 15px;
+
+   /* Varios */
+   opacity: 1;
+}

@@ -33,7 +33,7 @@
    background-color: blue;
 }
 
-/* usado naturalmente en los idomas, pero lo que enrealidad hace es poner un guion despues del atributo que le pasemos */
+/* usado naturalmente en los idiomas, pero lo que enrealidad hace es poner un guion despues del atributo que le pasemos */
 [lang|="en"]{
    background-color: rosybrown;
 }

@@ -1,0 +1,68 @@
+/*
+   las medidas en css son dos Absoutas y Relativas
+
+   las medidas absolutas NO CAMBIAN y siempre mantendran su tamaño independientemente del dispositivo:
+   la mas usada es px
+   - cm - mm - Q (cuarto de milimetro)
+   - in (pulgadas) - pc (picas) - pt (puntos)
+
+   las medidas relativas SIEMPRE dependen de un contexto, son las que se recomienda utilizar en la gran mayoria de
+   ocasiones porque nos van a permitir que todos los elementos escalen proporcionalmente:
+   la mas usadas son em, rem, %, vw, vh, vmin y vmax. tambien existen ex, ch y lh
+
+   Dorian recomienda usar rem y tambien que no alteremos el font size que trae por defecto el html (16px)
+
+   rem = size de la raiz: este varia dependiendo el tamaño de la medida de la raiz del html
+   em = toma de referencia el tamaño del padre o contenedor
+   y estos basan su medida dependiendo el tamaño de la letra que este declarado:
+   rem usara el de la raiz, por defecto es de 16px, a menos que la cambiemos
+
+   em usara el tamaño de font-size mas cercano, entonces si su propio contenedor se le declara un font-size
+   usara ese pero si no usara el de su elemento mas cercano
+
+*/
+
+body {
+   background-color: #333;
+   color: lightcoral;
+   font-size: 10px;
+}
+
+.title-2 {
+   font-size: 2em;
+}
+
+.title-1 {
+   font-size: 2rem;
+}
+
+.text {
+   font-size: 1rem;
+}
+
+.link-rem {
+   /* apunta a la raiz */
+   padding: 1rem 2rem; /* 16px 32px */
+   margin-right: 10px;
+   margin-bottom: 10px;
+   font-size: 2rem; /* 32px */
+
+   border-radius: 0.5rem; /* 8px */
+   background-color: lightcoral;
+   color: #333;
+
+   display: inline-block;
+}
+
+.link-em {
+   /* apunta al font-size mas cercano */
+   padding: 1em 2em; /* 16px 32px */
+
+   font-size: 2rem; /* 32px */
+
+   border-radius: 0.5em; /* 8px */
+   background-color: lightcoral;
+   color: #333;
+
+   display: inline-block;
+}
